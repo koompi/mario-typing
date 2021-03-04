@@ -1,7 +1,7 @@
 # Maintainer: Pichponereay NGOR <isaacjacksonreay at gmail dot com>
 
 pkgname=mario-typing
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Mario Typing with wine"
 arch=("any")
@@ -17,7 +17,7 @@ sha256sums=(
   "241df2a7bb69f0544362aa4f61c46166b1965dcf7cd90d8df3ea87d2b5a45891"
   "0698f3ea7aaf126e6f2b40f9d188d29bd33fa7cf90d7f99d15f4274d433463d3"
   "8889b6f6968a3c0659043da8a854396ca6e90171b7a0bdea6151f631ac05ae58"
-  "d5459725b9a74bd12deb75b4d83a9334603475f3e6063162c6a2265f355c371b"
+  "be70eefd439c3024414b348970deb790487c6b9ca4d026f0e750ff057b8883a0"
 )
 
 build(){
