@@ -2,7 +2,7 @@
 
 pkgname=mario-typing
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Mario Typing with wine"
 arch=("any")
 license=("MIT")
@@ -14,7 +14,7 @@ source=(
   "${pkgname}.tar.zst"
 )
 sha256sums=(
-  "241df2a7bb69f0544362aa4f61c46166b1965dcf7cd90d8df3ea87d2b5a45891"
+  "aba1b300f739f52db813c27e0814fbf65d3811b2d13ee431ff7fdc927ca93205"
   "0698f3ea7aaf126e6f2b40f9d188d29bd33fa7cf90d7f99d15f4274d433463d3"
   "8889b6f6968a3c0659043da8a854396ca6e90171b7a0bdea6151f631ac05ae58"
   "be70eefd439c3024414b348970deb790487c6b9ca4d026f0e750ff057b8883a0"
