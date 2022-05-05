@@ -1,14 +1,17 @@
 #!/bin/bash
-original_conf="/home/$USER/.dosbox/dosbox-0.74-3.conf";
-output_stdout=`cat "${original_conf}" | grep -n output= | grep -v '#'`;
+cd /opt/Mario-Typing/
+original_conf="/home/$USER/.dosbox/dosbox-*.conf";
+[[ -f "${original_conf}" ]] && check=false || check=true;
+[[ $check ]] && dosbox MARIO.EXE & 
+[[ $check ]] && sleep 2 && kill -9 `ps -aux | grep [d]osbox | awk -F' ' '{printf $2}'`
+output_stdout=`cat $original_conf | grep -n output= | grep -v '#'`;
 windowresolution_stdout=`cat ~/.dosbox/dosbox-0.74-3.conf | grep -n windowresolution | grep -v '#'`;
 output=`echo "${output_stdout}" | awk -F':' '{printf $2}'`;
 output_nth=`echo "${output_stdout}" | awk -F':' '{printf $1}'`;
 windowresolution=`echo "${windowresolution_stdout}" | awk -F':' '{printf $2}'`;
 windowresolution_nth=`echo "${windowresolution_stdout}" | awk -F':' '{printf $1}'`;
 
-[[ "${output}" != "overlay" ]] && sed -i "${output_nth}s/.*/output=overlay/" "${original_conf}";
-[[ "${windowresolution}" != "1600x1200" ]] && sed -i "${windowresolution_nth}s/.*/windowresolution=1600x1200/" "${original_conf}";
+[[ "${output}" != "overlay" ]] && sed -i "${output_nth}s/.*/output=overlay/" $original_conf;
+[[ "${windowresolution}" != "1600x1200" ]] && sed -i "${windowresolution_nth}s/.*/windowresolution=1600x1200/" $original_conf;
 
-cd /opt/Mario-Typing/
-wine MARIO.EXE
+dosbox MARIO.EXE
